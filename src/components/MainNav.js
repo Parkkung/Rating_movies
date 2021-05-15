@@ -30,9 +30,9 @@ export default function SimpleBottomNavigation() {
       history.push("/search");
     }
     else if (value === 2) {
-      history.push("/favorite");
-    }
-  }, [value, history]);
+        history.push("/favorite");
+      }
+    }, [value, history]);
 
   return (
     <BottomNavigation
@@ -43,7 +43,7 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      
+
       <BottomNavigationAction
         style={{ color: "white" }}
         label="Movies"
@@ -54,16 +54,12 @@ export default function SimpleBottomNavigation() {
         label="Search"
         icon={<SearchIcon />}
       />
-       <BottomNavigationAction
+      <BottomNavigationAction
         style={{ color: "white" }}
         label="Favorite"
-        icon={<FavoriteIcon/>}
+        icon={<FavoriteIcon />}
       />
-      {/* <BottomNavigationAction
-        style={{ color: "white" }}
-        label="TV Series"
-        icon={<TvIcon />}
-      /> */}
+
 
     </BottomNavigation>
   );
