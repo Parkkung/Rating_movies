@@ -13,6 +13,7 @@ import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Carousel from "../Carousel/Carousel";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "90%",
     height: "80%",
-    backgroundColor: "#39445a",
+    backgroundColor: "#171817",
     border: "1px solid #282c34",
     borderRadius: 10,
     color: "white",
@@ -143,6 +144,16 @@ export default function TransitionsModal({ children, media_type, id }) {
                     href={`https://www.youtube.com/watch?v=${video}`}
                   >
                     Watch the Trailer
+                  </Button>
+                  <Button
+                  style={{marginTop:5,backgroundColor:"#45F095"}}
+                    variant="contained"
+                    startIcon={<FavoriteIcon />}
+                    color="secondary"
+                    target="__blank"
+                    href={`https://www.youtube.com/watch?v=${video}`}
+                  >
+                    Add Favorite
                   </Button>
                 </div>
               </div>

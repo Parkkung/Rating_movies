@@ -55,16 +55,16 @@ const Search = () => {
       <ThemeProvider theme={darkTheme}>
         <div className="search">
           <TextField
-            style={{ flex: 1 }}
+            style={{ flex: 1, }}
             className="searchBox"
-            label="Search"
+            label="Search movie"
             variant="filled"
             onChange={(e) => setSearchText(e.target.value)}
           />
           <Button
             onClick={fetchSearch}
             variant="contained"
-            style={{ marginLeft: 10 }}
+            style={{ marginLeft: 10 , borderRadius:40}}
           >
             <SearchIcon fontSize="large" />
           </Button>

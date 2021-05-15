@@ -3,9 +3,9 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/MainNav";
 import Movies from "./Pages/Movies/Movies";
-import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import Search from "./Pages/Search/Search";
+import Favorite from "./Pages/Favorite/Favorite"
 import { Container } from "@material-ui/core";
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
           <Switch>
             <Route path="/" component={Trending} exact />
             <Route path="/movies" component={Movies} />
+            <Route path="/favorite" component={Favorite}/>
             {/* <Route path="/series" component={Series} /> */}
             <Route path="/search" component={Search} />
           </Switch>

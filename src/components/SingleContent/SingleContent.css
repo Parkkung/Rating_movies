@@ -1,17 +1,17 @@
 .media {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  padding: 5px;
+  width: 150px;
+  padding: 8px;
   margin: 5px 0;
-  background-color: #282c34;
-  border-radius: 10px;
+  background-color: black;
+  border-radius: 20px;
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
 
 .media:hover {
-  background-color: white;
+  background-color: #45F095;
   color: black;
 }
 
@@ -30,6 +30,7 @@
   text-align: center;
   font-size: 17px;
   padding: 8px 0;
+  font-weight: bold;
 }
 
 .subTitle {
