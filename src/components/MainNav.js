@@ -28,6 +28,8 @@ export default function SimpleBottomNavigation() {
       history.push("/movies");
     } else if (value === 1) {
       history.push("/search");
+    } else if (value === 2) {
+      history.push("/Home")
     }
   }, [value, history]);
 
@@ -51,11 +53,11 @@ export default function SimpleBottomNavigation() {
         label="Search"
         icon={<SearchIcon />}
       />
-      {/* <BottomNavigationAction
+      <BottomNavigationAction
         style={{ color: "white" }}
-        label="TV Series"
+        label="Home"
         icon={<TvIcon />}
-      /> */}
+      />
 
     </BottomNavigation>
   );
