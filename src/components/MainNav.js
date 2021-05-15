@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     width: "100%",
     position: "fixed",
     bottom: 0,
-    backgroundColor: "#2d313a",
+    backgroundColor: "#21D674",
     zIndex: 100,
   },
 });
@@ -25,12 +25,8 @@ export default function SimpleBottomNavigation() {
 
   useEffect(() => {
     if (value === 0) {
-      history.push("/");
-    } else if (value === 1) {
       history.push("/movies");
-    } else if (value === 2) {
-      history.push("/series");
-    } else if (value === 3) {
+    } else if (value === 1) {
       history.push("/search");
     }
   }, [value, history]);
@@ -44,11 +40,7 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction
-        style={{ color: "white" }}
-        label="Trending"
-        icon={<WhatshotIcon />}
-      />
+      
       <BottomNavigationAction
         style={{ color: "white" }}
         label="Movies"
@@ -56,14 +48,15 @@ export default function SimpleBottomNavigation() {
       />
       <BottomNavigationAction
         style={{ color: "white" }}
-        label="TV Series"
-        icon={<TvIcon />}
-      />
-      <BottomNavigationAction
-        style={{ color: "white" }}
         label="Search"
         icon={<SearchIcon />}
       />
+      {/* <BottomNavigationAction
+        style={{ color: "white" }}
+        label="TV Series"
+        icon={<TvIcon />}
+      /> */}
+
     </BottomNavigation>
   );
 }
