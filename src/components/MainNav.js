@@ -29,9 +29,7 @@ export default function SimpleBottomNavigation() {
     } else if (value === 1) {
       history.push("/search");
     }
-    else if (value === 2) {
-        history.push("/favorite");
-      }
+   
     }, [value, history]);
 
   return (
@@ -54,11 +52,11 @@ export default function SimpleBottomNavigation() {
         label="Search"
         icon={<SearchIcon />}
       />
-      <BottomNavigationAction
+      {/* <BottomNavigationAction
         style={{ color: "white" }}
         label="Favorite"
         icon={<FavoriteIcon />}
-      />
+      /> */}
 
 
     </BottomNavigation>

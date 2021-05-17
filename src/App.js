@@ -14,6 +14,7 @@ import SignUp from './components/SignUp'
 import Dashboard from './components/Dashboard'
 import { AuthProvider } from './components/Auth'
 
+
 function App() {
   return (
     <AuthProvider>
@@ -23,17 +24,21 @@ function App() {
           <Container>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/LogIn" component={LogIn} />
-              <Route path="/SignUp" component={SignUp} />
+              <Route path="/login" component={LogIn} />
+              <Route path="/signup" component={SignUp} />
               <Route path="/Dashboard" component={Dashboard} />
               <Route path="/movies" component={Movies} />
               <Route path="/search" component={Search} />
             </Switch>
           </Container>
+
         </div>
-        {/* <SimpleBottomNavigation /> */}
+          {/* <SimpleBottomNavigation /> */}
+
       </BrowserRouter>
+
     </AuthProvider>
+
   );
 }
 

@@ -1,7 +1,9 @@
 .header {
-  width: 100%;
+  width: 90%;
+  margin-top: -125px;
+  right: 70px;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   text-transform: uppercase;

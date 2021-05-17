@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
+import Header from "../../components/Header/Header";
+
 
 const Search = () => {
   const [type, setType] = useState(0);
@@ -52,6 +54,8 @@ const Search = () => {
 
   return (
     <div>
+      <Header />
+
       <ThemeProvider theme={darkTheme}>
         <div className="search">
           <TextField

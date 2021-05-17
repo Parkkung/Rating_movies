@@ -1,9 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Genres from "../../components/Genres/Genres";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import useGenre from "../../hooks/useGenre";
 import CustomPagination from "../../components/Pagination/CustomPagination";
+import Header from "../../components/Header/Header";
+import { Redirect } from 'react-router-dom'
+import { AuthContext } from '../../components/Auth'
+
 
 const Movies = () => {
   const [genres, setGenres] = useState([]);
@@ -28,9 +32,18 @@ const Movies = () => {
     // eslint-disable-next-line
   }, [genreforURL, page]);
 
+  const { currentUser } = useContext(AuthContext);
+
+  if (!currentUser) {
+    return <Redirect to="/login" />;
+  }
+
   return (
+
+
     <div>
-      
+      <Header />
+
       <Genres
         type="movie"
         selectedGenres={selectedGenres}
