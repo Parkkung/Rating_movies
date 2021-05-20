@@ -7,6 +7,8 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 import Header from "../../components/Header/Header";
 import { Redirect } from 'react-router-dom'
 import { AuthContext } from '../../components/Auth'
+import firebaseConfig from '../../Firebase'
+
 
 
 const Movies = () => {
@@ -30,6 +32,7 @@ const Movies = () => {
     window.scroll(0, 0);
     fetchMovies();
     // eslint-disable-next-line
+
   }, [genreforURL, page]);
 
   const { currentUser } = useContext(AuthContext);

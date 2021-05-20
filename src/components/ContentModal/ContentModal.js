@@ -12,7 +12,6 @@ import {
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import Carousel from "../Carousel/Carousel";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const useStyles = makeStyles((theme) => ({
@@ -132,9 +131,6 @@ export default function TransitionsModal({ children, media_type, id }) {
                     {content.overview}
                   </span>
 
-                  <div>
-                    <Carousel id={id} media_type={media_type} />
-                  </div>
 
                   <Button
                     variant="contained"
